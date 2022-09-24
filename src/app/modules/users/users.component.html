@@ -1,0 +1,38 @@
+<p-table [value]="arrayUsers" responsiveLayout="scroll">
+  <ng-template pTemplate="caption">
+    <div class="table-header">
+        <strong>Lista de usuarios</strong>
+        <div class="header__btn">
+          <a routerLink="/modules/users/add">Agregar Usuario</a>
+        </div>
+    </div>
+</ng-template>
+  <ng-template pTemplate="header">
+      <tr>
+          <th class="header__title">Cedula</th>
+          <th class="header__title">Nombre</th>
+          <th class="header__title">Email</th>
+          <th class="header__title">Acciones</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-user>
+      <tr>
+          <td class="body__title">{{user?.cedula}}</td>
+          <td class="body__title">{{user?.name}}</td>
+          <td class="body__title">{{user?.email}}</td>
+          <td class="body__title actions">
+            <div class="actions__btn">
+              <a [routerLink]="'/modules/users/show/' + user?.cedula">
+                <img src="../../../assets/details.svg" alt="details">
+              </a>
+            </div>
+
+            <div class="actions__btn">
+              <a [routerLink]="'/modules/users/edit/' + user?.cedula">
+                <img src="../../../assets/edit.svg" alt="edit">
+              </a>
+            </div>
+          </td>
+      </tr>
+  </ng-template>
+</p-table>

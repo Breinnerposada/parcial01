@@ -1,0 +1,82 @@
+h5{
+  color: #005B56;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 16px 12px !important;
+  gap: 143px;
+  width: 519px;
+  height: 47px;
+  background: #FFFFFF !important;
+  border: 1px solid #F0F0F0 !important;
+  border-radius: 10px !important;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+}
+
+
+.field{
+
+  display: flex;
+  flex-direction: column;
+
+  &__title{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.6px;
+  color: #767676;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  }
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+
+
+.button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 14px 10px;
+gap: 10px;
+width: 177px;
+height: 50px;
+left: 248px;
+top: 670px;
+/* Primary/Tida Pool */
+color: white;
+background: #005B56;
+border-radius: 26px;
+border: 1px solid #005B56;;
+outline: none;
+
+}
+
+.btn-actions{
+  display: flex;
+  justify-content:flex-end;
+  margin-top: 50px;
+  &--disabled{
+    @extend .button;
+    display: flex;
+    margin-top: 50px;
+    background-color: gray;
+  }
+}

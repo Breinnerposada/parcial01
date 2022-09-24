@@ -1,0 +1,29 @@
+
+<form [formGroup]="userForm">
+  <div class="card">
+    <h5>Agregar Prestamo</h5>
+    <div class="field">
+        <label class="field__title" for="firstname1">Id Del Usuario</label>
+        <p-dropdown
+        [options]="users"
+        formControlName="idUser"
+        optionLabel="name"
+        optionValue="cedula">
+      </p-dropdown>
+    </div>
+    <div class="field">
+        <label class="field__title" for="firstname1">Id Del Juego</label>
+        <p-dropdown
+        [options]="games"
+        formControlName="idGame"
+        optionLabel="name"
+        optionValue="id">
+      </p-dropdown>
+    </div>
+  </div>
+</form>
+
+<div class="btn-actions">
+  <button (click)="add()" [ngClass]="userForm.valid ? 'button' : 'btn-actions--disabled'">Agregar</button>
+</div>
+<p-toast></p-toast>

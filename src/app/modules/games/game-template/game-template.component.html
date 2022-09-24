@@ -1,0 +1,23 @@
+
+<form [formGroup]="userForm">
+
+  <div class="card">
+    <h5>{{placeholder}} Juego</h5>
+    <div class="field">
+        <label class="field__title" for="firstname1">Codigó</label>
+        <input formControlName="codigo" id="firstname1" placeholder="Ingresa el codigo" type="text" >
+    </div>
+    <div class="field">
+        <label class="field__title" for="firstname1">Nombre</label>
+        <input formControlName="name" id="firstname1" placeholder="Ingresa el nombre" type="text" >
+    </div>
+  </div>
+
+
+</form>
+
+<div class="btn-actions">
+  <button (click)="add()" [ngClass]="userForm.valid ? 'button' : 'btn-actions--disabled'" [disabled]="!userForm.valid">{{placeholder}}</button>
+</div>
+
+<p-toast></p-toast>

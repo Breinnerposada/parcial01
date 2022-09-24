@@ -1,0 +1,140 @@
+/**You can add global styles to this file, and also import other style files */
+@import "src/styles/abstracts/colors/_background-colors.scss";
+@import "src/styles/abstracts/fonts/font-sizes";
+@import "src/styles/abstracts/fonts/fonts-weight";
+@import "src/styles/abstracts/variables/text-align";
+@import "src/styles/abstracts/colors/text-colors";
+
+.container{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: calc(100vh - 20px);
+
+  &__menu{
+    flex: 1;
+    padding: 10px;
+    background: #FFFFFF;
+    /* Shadows/L */
+    box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 0px;
+  }
+
+  &__router{
+    padding: 20px;
+    flex: 6;
+    background: #FFFFFF;
+    /* Shadows/L */
+    box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
+  }
+}
+
+
+.logo {
+  padding: 18px 34px;
+  text-align: center;
+  border-bottom: 1px solid $color-background-grayscale-super-silver;
+  &__img {
+    width: 118px;
+    margin-top: 10px;
+    color: #005B56;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &__icon {
+    width: 18px;
+    margin: 5px 12px;
+  }
+}
+.layout-side-items {
+  margin-top: 25px;
+  cursor: pointer;
+}
+.layout-side-items-container {
+  padding: 8px 0px;
+  border-bottom: 1px solid $color-background-grayscale-super-silver;
+  &__title {
+    color: $color-text-white-space;
+    margin: 10px 22px;
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-2;
+  }
+}
+
+.layout-side-items-container-collapsed {
+  border-bottom: 0px;
+  padding: 7px 12px;
+}
+
+.layout-side-items-container:nth-child(4) {
+  border-bottom: none;
+}
+
+.layout-side-items-container-item {
+  &__title {
+    margin-left: 8px;
+    color: $color-text-black-ligth;
+    font-weight: 400;
+    font-size: $font-size-3;
+    line-height: 20px;
+  }
+  &__title:hover {
+    color: $color-aqua-green-link;
+  }
+  &__collapsed {
+    margin: 23px 9px;
+    width: 20px;
+  }
+}
+.ant-menu-item,
+.ant-menu-submenu-title {
+  margin: 0px;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: $color-background-white;
+}
+.ant-menu-inline .ant-menu-item::after {
+  border-right: 3px solid $color-text-light-green;
+}
+.logout {
+  bottom: 0px;
+  position: absolute;
+  height: 98px;
+  border-top: 1px solid $color-background-grayscale-super-silver;
+  width: 100%;
+}
+.logout-container-button {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  &__img {
+    margin-right: 10px;
+    margin-left: -15px;
+    width: 20px;
+  }
+  &__name {
+    color: $color-text-alert-ligth;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-3;
+  }
+  &__collapsed {
+    margin-left: 0px;
+  }
+}
+.logout-container {
+  text-align: $text-align-left;
+  padding: 3px 3px 3px 26px;
+  font-weight: $font-weight-regular;
+  &__version {
+    margin-top: 23px;
+    text-align: $text-align-center;
+    color: $color-text-white-space;
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-2;
+  }
+}
+
+ul {
+  list-style-type: none;
+}

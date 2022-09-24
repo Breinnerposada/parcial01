@@ -1,0 +1,40 @@
+
+
+
+<div class="container">
+  <div class="container__menu">
+    <div class="logo">
+      <strong class="logo__img">Store</strong>
+    </div>
+    <ul nz-menu nzMode="inline" class="layout-side-items" >
+      <div
+        *ngFor="let menu of items"
+        class="layout-side-items-container"
+      >
+        <li class="layout-side-items-container__title" >
+          {{ menu.label }}
+        </li>
+        <li
+          nz-menu-item
+          *ngFor="let submenu of menu.items"
+          class="layout-side-items-container-item"
+          [routerLink]="[submenu[0].url]"
+        >
+        <i [class]="submenu[0].icon"
+        alt="icon"
+        class="layout-side-items-container-item__img"
+        ></i>
+          <span
+            class="layout-side-items-container-item__title"
+            >{{ submenu[0].label }}</span
+          >
+        </li>
+      </div>
+    </ul>
+
+
+  </div>
+  <div class="container__router">
+    <router-outlet></router-outlet>
+  </div>
+</div>

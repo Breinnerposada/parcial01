@@ -1,0 +1,23 @@
+
+<form [formGroup]="userForm">
+  <div class="card">
+    <h5>{{placeholder}} Usuario</h5>
+    <div class="field">
+        <label class="field__title" for="firstname1">Cedula</label>
+        <input formControlName="cedula" id="firstname1" placeholder="Ingresa una Cedula" type="text" >
+    </div>
+    <div class="field">
+        <label class="field__title" for="firstname1">Nombre</label>
+        <input formControlName="name" id="firstname1" placeholder="Ingresa un Nombre" type="text" >
+    </div>
+    <div class="field">
+        <label class="field__title" for="lastname1">Correo Electronico</label>
+        <input formControlName="email" id="lastname1" placeholder="Ingresa un Correo Electronico" type="text" >
+    </div>
+  </div>
+</form>
+
+<div class="btn-actions">
+  <button (click)="add()" [ngClass]="userForm.valid ? 'button' : 'btn-actions--disabled'" [disabled]="!userForm.valid">{{placeholder}}</button>
+</div>
+<p-toast></p-toast>

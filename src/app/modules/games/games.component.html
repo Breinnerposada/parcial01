@@ -1,0 +1,38 @@
+<p-table [value]="arrayGames" responsiveLayout="scroll">
+  <ng-template pTemplate="caption">
+    <div class="table-header">
+        <strong>Lista de Juegos</strong>
+        <div class="header__btn">
+          <a routerLink="/modules/games/add">Agregar Juego</a>
+        </div>
+    </div>
+</ng-template>
+  <ng-template pTemplate="header">
+      <tr>
+          <th class="header__title">Codigo</th>
+          <th class="header__title">Nombre</th>
+          <th class="header__title">Codigo ejemplar</th>
+          <th class="header__title">Acciones</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-game>
+      <tr>
+          <td class="body__title">{{game?.codigo}}</td>
+          <td class="body__title">{{game?.name}}</td>
+          <td class="body__title">{{game?.codigoEjemplar}}</td>
+          <td class="body__title actions">
+            <div class="actions__btn">
+              <a [routerLink]="'/modules/games/show/' + game?.id">
+                <img src="../../../assets/details.svg" alt="details">
+              </a>
+            </div>
+
+            <div class="actions__btn">
+              <a [routerLink]="'/modules/games/edit/' + game?.id">
+                <img src="../../../assets/edit.svg" alt="edit">
+              </a>
+            </div>
+          </td>
+      </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,37 @@
+@import "abstracts/colors/colors";
+@import "abstracts/variables/variables";
+
+/**
+ * @description
+ *   Component button
+ */
+
+%button {
+  align-items: center;
+  border: 1px solid $color-border-btn;
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  height: auto;
+}
+
+$btn-box-shadow-default: 0 2px 0 rgb(0 0 0 / 2%);
+
+@mixin button-variant(
+  $border-color: $color-border-btn,
+  $border-radius: $border-radius-xs,
+  $padding: 0,
+  $height: 100%,
+  $color: $color-text-default,
+  $background: $color-background-white,
+  $box-shadow: $btn-box-shadow-default
+) {
+  @extend %button;
+  border-color: $border-color;
+  border-radius: $border-radius;
+  color: $color;
+  height: $height;
+  padding: $padding;
+  background: $background;
+  box-shadow: $box-shadow;
+}
